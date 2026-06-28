@@ -14,6 +14,6 @@ export default [
   },
   ...base,
   {
-    ignores: ['**/dist/**', '**/build/**', '**/node_modules/**'],
+    ignores: ['**/dist/**', '**/build/**', '**/node_modules/**', '**/*.config.ts'],
   },
 ];

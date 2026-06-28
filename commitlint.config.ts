@@ -96,6 +96,9 @@ const config: UserConfig = {
         'ci-cd-engine',
         'performance-suite',
         'auto-healing',
+        // Tools
+        'husky',
+        'commitlint',
       ],
     ],
 
