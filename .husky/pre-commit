@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # Build the shared eslint config package before linting staged files
 pnpm run build:eslint-config
 
