@@ -1,0 +1,17 @@
+{
+  "name": "@yuvadevlab/auth-server",
+  "version": "0.0.0-dev",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "@yuvadevlab/tsconfig": "workspace:*",
+    "@yuvadevlab/eslint-config": "workspace:*",
+    "@yuvadevlab/prettier-config": "workspace:*"
+  }
+}

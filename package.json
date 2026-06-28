@@ -1,0 +1,66 @@
+{
+  "name": "@yuvadevlab/workspace",
+  "version": "1.0.0",
+  "description": "Yuva Devlab Workspace",
+  "author": "Yuvaraj Pattabi",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/*/*"
+  ],
+  "scripts": {
+    "clean": "pnpm -r --filter '@yuvadevlab/*' run clean",
+    "build:eslint-config": "pnpm --filter @yuvadevlab/eslint-config run build",
+    "build:packages": "pnpm -r --filter '@yuvadevlab/*' run build",
+    "lint": "pnpm run build:eslint-config && eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=0 --no-ignore",
+    "lint:fix": "pnpm run build:eslint-config && eslint . --ext .js,.jsx,.ts,.tsx --fix --max-warnings=0 --no-ignore",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "pnpm nx run-many -t test --all",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --max-warnings=0 --no-ignore",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.6.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@commitlint/cli": "^21.1.0",
+    "@commitlint/config-conventional": "^21.1.0",
+    "@commitlint/types": "^21.1.0",
+    "@eslint/js": "^9.0.0",
+    "@nx/js": "^23.0.1",
+    "@nx/workspace": "^23.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.62.0",
+    "@typescript-eslint/parser": "^8.62.0",
+    "@yuvadevlab/eslint-config": "workspace:*",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "nx": "^23.0.1",
+    "prettier": "^3.8.4",
+    "typescript-eslint": "^8.62.0"
+  }
+}

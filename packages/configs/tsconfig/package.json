@@ -1,0 +1,10 @@
+{
+  "name": "@yuvadevlab/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist"
+  },
+  "main": "base.json",
+  "types": "base.json"
+}
