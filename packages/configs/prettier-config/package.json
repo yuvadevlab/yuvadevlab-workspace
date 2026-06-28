@@ -1,0 +1,13 @@
+{
+  "name": "@yuvadevlab/prettier-config",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "@yuvadevlab/eslint-config": "workspace:*",
+    "@yuvadevlab/tsconfig": "workspace:*"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules
+dist
+.turbo
+.next
+.svelte-kit
+out
+build
+coverage
+.env*
+.DS_Store
+.husky/
+.nx/

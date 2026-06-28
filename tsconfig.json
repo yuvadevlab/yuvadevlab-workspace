@@ -1,0 +1,38 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/configs/eslint-config"
+    },
+    {
+      "path": "./packages/validation"
+    },
+    {
+      "path": "./packages/logger"
+    },
+    {
+      "path": "./packages/http-client"
+    },
+    {
+      "path": "./packages/kafka-client"
+    },
+    {
+      "path": "./packages/event-schemas"
+    },
+    {
+      "path": "./packages/auth/auth-server"
+    },
+    {
+      "path": "./packages/auth/auth-client"
+    },
+    {
+      "path": "./packages/worker-pool"
+    },
+    {
+      "path": "./packages/design-system"
+    },
+    {
+      "path": "./packages/testing"
+    }
+  ]
+}

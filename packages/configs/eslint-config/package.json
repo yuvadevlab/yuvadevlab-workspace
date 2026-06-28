@@ -1,0 +1,43 @@
+{
+  "name": "@yuvadevlab/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "default": "./dist/react.js"
+    },
+    "./typescript": {
+      "types": "./dist/typescript.d.ts",
+      "default": "./dist/typescript.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest"
+  },
+  "devDependencies": {
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "@types/node": "^24.1.0",
+    "@yuvadevlab/tsconfig": "workspace:*",
+    "typescript": "^5.6.3",
+    "vite": "^8.1.0",
+    "vite-plugin-dts": "^5.0.3"
+  }
+}
